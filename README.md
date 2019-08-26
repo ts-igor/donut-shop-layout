@@ -16,13 +16,13 @@ Run this command from the root directory conraining *package.json* file :
 npm install
 ```
 
-After installing all the dependencies run the following command to build static **HTML** pages and **CSS** file.
+After installing all the dependencies run:
 
 ```
 gulp
 ```
 
-It will run the default Gulp task that contains automatic **.pug* and **.sass* recompilation on every file save. And each compilation will make running local HTTP server reload its page.
+It will start the default Gulp task that automatically recompile changed *\*.pug* and *\*.sass* files to **HTML** and **CSS**. Each compilation also makes running local HTTP server reload its page.
 
 ## Used technologies
 

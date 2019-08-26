@@ -1,0 +1,32 @@
+include parts/mixins.pug
+
++page("Sign in")
+    .centered-container
+        section.sign-in
+            
+            h2 Sign in
+
+            form(action="" method="POST")
+                input(
+                    name="email"
+                    type="text"
+                    autofocus
+                    required
+                    minlength="5" maxlength="40"
+                    placeholder="E-mail"
+                )
+                
+                input(
+                    name="password" 
+                    type="password" 
+                    required 
+                    minlength="4" 
+                    placeholder="Password"
+                )
+                
+                p Not registered? #[a(href="signUp.html") Sign up!]
+                
+                input(
+                    type="submit"
+                    value="Sign in"
+                )

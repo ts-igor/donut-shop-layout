@@ -1,0 +1,365 @@
+@import url("https://fonts.googleapis.com/css?family=Gorditas|Raleway&display=swap");
+html {
+  font-family: 'Gorditas', cursive;
+  font-size: calc(1vw); }
+
+@media (max-width: 939px) {
+  html {
+    font-size: calc(1em + 1vw); } }
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  color: #f3efd7;
+  background-color: #f1f8fd;
+  min-width: 320px; }
+
+input,
+button {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit; }
+
+.horizontal-list {
+  margin: 0;
+  padding: 0; }
+  .horizontal-list li {
+    display: inline-block;
+    list-style: none; }
+
+.centered-container {
+  width: 80%;
+  margin: 0 auto; }
+
+a:link,
+a:visited {
+  color: inherit;
+  text-decoration: none; }
+
+:hover {
+  transition: background-color 0.5s linear 0s,  color 0.3s linear 0s; }
+
+:focus {
+  transition: border 0.5s linear 0s; }
+
+header {
+  background-color: #6ba8b0;
+  overflow: hidden; }
+  header .donut {
+    position: absolute;
+    display: none;
+    top: -50vw;
+    left: 15vw;
+    width: 60vw;
+    height: 60vw;
+    background: url("../img/donut.svg") rgba(0, 0, 0, 0);
+    background-size: cover;
+    background-repeat: no-repeat;
+    pointer-events: none; }
+  header .user-panel {
+    z-index: 1;
+    color: #f3efd7;
+    text-align: end; }
+    header .user-panel li {
+      margin: 0 .25rem;
+      padding: .25rem .5rem;
+      border-bottom-left-radius: .5rem;
+      border-bottom-right-radius: .5rem;
+      background-color: #f7aa52; }
+      header .user-panel li:hover {
+        background: #f1860b;
+        cursor: pointer; }
+  header h1 {
+    z-index: 1;
+    margin: 4rem 4rem;
+    font-size: 4rem;
+    color: #f7aa52;
+    text-shadow: -2px 1px 1px #f3efd7; }
+  header nav {
+    background-color: #578c94; }
+    header nav .horizontal-list {
+      margin-left: 12rem; }
+      header nav .horizontal-list li {
+        padding: .5rem; }
+        header nav .horizontal-list li:hover {
+          color: #f7aa52;
+          background: #446e74; }
+      header nav .horizontal-list .selected {
+        background-color: #f7aa52;
+        pointer-events: none; }
+
+@media (max-width: 624px) {
+  header .user-panel {
+    text-align: center; } }
+
+@media (max-width: 939px) {
+  header h1, header nav .horizontal-list {
+    text-align: center; }
+  header h1 {
+    margin: 4rem auto; }
+  header nav .horizontal-list {
+    margin-left: 0; } }
+
+main {
+  font-family: 'Raleway', sans-serif;
+  color: #4f4a54; }
+  main h2 {
+    font-family: 'Gorditas', cursive; }
+  main form {
+    display: contents; }
+  main input,
+  main select {
+    box-sizing: border-box;
+    display: block;
+    padding: .5rem;
+    border: 2px solid #6ba8b0;
+    border-radius: 2px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    color: #4f4a54;
+    background-color: #f1f8fd; }
+  main select {
+    padding: 0 .5rem; }
+  main input[type="submit"] {
+    color: #f3efd7;
+    background: #f7aa52;
+    border: none; }
+    main input[type="submit"]:hover {
+      background: #f1860b; }
+  main .left-container,
+  main .centered-container {
+    min-height: 40vh; }
+  main .left-container {
+    width: 50%;
+    margin: 5rem 8rem; }
+  main .centered-container {
+    margin: 1.5rem auto;
+    max-width: 1200px; }
+    main .centered-container .products-filter {
+      width: 70%;
+      display: grid;
+      grid-template-areas: "top-left top-right" "bottom-left bottom-right";
+      grid-template-columns: minmax(200px, 3fr) 1fr;
+      grid-template-rows: repeat(2, 3rem);
+      align-items: center;
+      justify-items: center; }
+      main .centered-container .products-filter .top-left,
+      main .centered-container .products-filter .top-right,
+      main .centered-container .products-filter .bottom-left,
+      main .centered-container .products-filter .bottom-right {
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        padding: .5rem; }
+        main .centered-container .products-filter .top-left input,
+        main .centered-container .products-filter .top-right input,
+        main .centered-container .products-filter .bottom-left input,
+        main .centered-container .products-filter .bottom-right input {
+          width: 100%;
+          height: 100%; }
+      main .centered-container .products-filter .top-right,
+      main .centered-container .products-filter .bottom-right {
+        justify-self: start; }
+        main .centered-container .products-filter .top-right input,
+        main .centered-container .products-filter .bottom-right input {
+          padding: 0; }
+      main .centered-container .products-filter .top-left {
+        grid-area: top-left; }
+      main .centered-container .products-filter .top-right {
+        grid-area: top-right; }
+      main .centered-container .products-filter .bottom-left {
+        grid-area: bottom-left;
+        display: flex; }
+        main .centered-container .products-filter .bottom-left select {
+          flex: 1 1 auto; }
+          main .centered-container .products-filter .bottom-left select:first-child {
+            margin-right: .25rem; }
+      main .centered-container .products-filter .bottom-right {
+        grid-area: bottom-right; }
+    main .centered-container .products-grid {
+      margin-top: 1.5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      justify-content: space-evenly; }
+      main .centered-container .products-grid .grid-cell a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: .5rem; }
+        main .centered-container .products-grid .grid-cell a img {
+          width: 100%; }
+        main .centered-container .products-grid .grid-cell a:hover {
+          border-radius: 3px;
+          box-shadow: -2px 2px 3px 1px #6ba8b0;
+          transform: translate(3px, -3px);
+          transition: box-shadow .3s, transform .3s; }
+    main .centered-container .pagination {
+      margin-top: 1.5rem; }
+      main .centered-container .pagination .horizontal-list {
+        text-align: center; }
+        main .centered-container .pagination .horizontal-list li:hover {
+          transform: scale(1.25);
+          color: #f7aa52; }
+        main .centered-container .pagination .horizontal-list .selected {
+          text-decoration: underline; }
+    main .centered-container .sign-in,
+    main .centered-container .sign-up {
+      width: 30%;
+      min-width: 250px;
+      margin: 5rem auto;
+      text-align: center; }
+      main .centered-container .sign-in h2,
+      main .centered-container .sign-up h2 {
+        margin: 1.5rem; }
+      main .centered-container .sign-in div,
+      main .centered-container .sign-up div {
+        display: inline-block;
+        padding: .5rem;
+        margin: .5rem;
+        background: #af4040;
+        color: #f3efd7; }
+      main .centered-container .sign-in a,
+      main .centered-container .sign-up a {
+        text-decoration: underline; }
+        main .centered-container .sign-in a:hover,
+        main .centered-container .sign-up a:hover {
+          color: #f7aa52; }
+      main .centered-container .sign-in input,
+      main .centered-container .sign-up input {
+        margin: .5rem 0;
+        width: 100%; }
+        main .centered-container .sign-in input[type="submit"],
+        main .centered-container .sign-up input[type="submit"] {
+          width: auto;
+          margin: .5rem auto; }
+    main .centered-container .product-info {
+      display: grid;
+      grid-template-areas: "img description" "img actions";
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 3fr 1fr;
+      align-items: center;
+      justify-items: center; }
+      main .centered-container .product-info input {
+        display: inline-block;
+        width: auto;
+        height: auto;
+        margin: .5rem; }
+        main .centered-container .product-info input[type="number"] {
+          width: 100px; }
+        main .centered-container .product-info input[type="submit"] {
+          padding: .5rem; }
+      main .centered-container .product-info .img,
+      main .centered-container .product-info .description,
+      main .centered-container .product-info .actions {
+        padding: 1rem; }
+      main .centered-container .product-info .img {
+        grid-area: img; }
+      main .centered-container .product-info .description {
+        grid-area: description; }
+      main .centered-container .product-info .actions {
+        grid-area: actions; }
+    main .centered-container hr {
+      color: #9c95a2;
+      opacity: 0.6; }
+    main .centered-container .cart {
+      text-align: center; }
+      main .centered-container .cart .horizontal-list {
+        margin: 3rem auto; }
+        main .centered-container .cart .horizontal-list li {
+          display: flex;
+          flex-flow: row nowrap;
+          margin: .5rem;
+          align-items: center;
+          justify-content: space-around; }
+          main .centered-container .cart .horizontal-list li img {
+            width: 100px; }
+          main .centered-container .cart .horizontal-list li img,
+          main .centered-container .cart .horizontal-list li span,
+          main .centered-container .cart .horizontal-list li input[type="number"] {
+            margin: .5rem; }
+          main .centered-container .cart .horizontal-list li input[type="number"] {
+            width: 60px; }
+      main .centered-container .cart .continue-button {
+        display: block;
+        margin: 1.5rem auto;
+        width: auto; }
+    main .centered-container .orders h2 {
+      text-align: center; }
+    main .centered-container .orders .product-table {
+      margin: 0 auto 5rem; }
+      main .centered-container .orders .product-table .product-row {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-items: center; }
+        main .centered-container .orders .product-table .product-row img,
+        main .centered-container .orders .product-table .product-row span {
+          margin: 0 1rem; }
+        main .centered-container .orders .product-table .product-row img {
+          width: 50px; }
+      main .centered-container .orders .product-table .total {
+        text-align: end; }
+    main .centered-container .account h2 {
+      text-align: center; }
+    main .centered-container .account .account-info input {
+      text-align: end;
+      margin: .5rem .5rem .5rem auto; }
+    main .centered-container .order-management h2,
+    main .centered-container .order-management .orders > h3 {
+      text-align: center; }
+    main .centered-container .order-management input {
+      margin: .5rem 0rem .5rem auto; }
+
+@media (max-width: 624px) {
+  main .centered-container .products-filter {
+    grid-template-areas: "top-left" "top-right" "bottom-left" "bottom-right";
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 50px); }
+    main .centered-container .products-filter .top-right,
+    main .centered-container .products-filter .bottom-right {
+      justify-self: center; }
+  main .centered-container .sign-in,
+  main .centered-container .sign-up {
+    width: 100%; }
+  main .centered-container .orders .product-table .product-row img,
+  main .centered-container .orders .product-table .product-row span {
+    margin: 0 .2rem; }
+  main .centered-container .orders .product-table .product-row img {
+    width: 25px; }
+  main .centered-container .account .account-info {
+    text-align: center; } }
+
+@media (max-width: 939px) {
+  main .left-container {
+    width: 70%;
+    margin: 2rem auto; }
+  main .centered-container .products-filter {
+    width: 100%; }
+  main .centered-container .product-info {
+    grid-template-areas: "img" "description" "actions";
+    grid-template-columns: minmax(250px, 1fr);
+    grid-template-rows: repeat(3, auto);
+    justify-self: center; }
+    main .centered-container .product-info img {
+      width: 250px; } }
+
+footer {
+  background-color: #6ba8b0;
+  font-size: .85rem; }
+  footer p {
+    margin: 0.5rem; }
+  footer .centered-container {
+    text-align: center;
+    padding: 0.75rem; }
+  footer .horizontal-list {
+    margin-top: 1.5rem; }
+    footer .horizontal-list li {
+      margin-right: 0.25rem;
+      margin-left: 0.25rem;
+      padding: 0.25rem;
+      border-left: 1px solid #f3efd7;
+      border-right: 1px solid #f3efd7; }
+      footer .horizontal-list li:hover {
+        color: #f7aa52; }

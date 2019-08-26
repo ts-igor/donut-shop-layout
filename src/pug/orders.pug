@@ -1,0 +1,80 @@
+include parts/mixins.pug
+
++page("Managing Orders")
+    .centered-container
+        section.order-management
+            h2 Order management 
+
+            section.orders
+                h3 Actual orders
+                - for (let i = 0; i < 1; i++)
+                    .product-table
+                        h3 Order ID: 112355
+                        label. 
+                            #[b To user: ] 
+                        span SomeUser 
+                        br
+                        label.
+                            #[b To: ] 
+                        span Country, City, Address, 1231212 
+                        br
+                        label.
+                            #[b Ordered on date: ]
+                        span 19/09/2019 
+                        hr
+                        
+                        - for (let i = 0; i < 4; i++)
+                            .product-row
+                                img(src="../img/donut.svg", alt="Donut Image")
+                                span Some Donut
+                                span x2
+                                span $9.98
+                            hr
+                        
+                        .total
+                            label.
+                                #[b Total: ]
+                            span $39.92
+
+                        form(action="" method="POST")
+                            input(type="hidden", name="orderId")
+                            input(type="submit", value="Mark as delivered")
+                
+                +pagination
+
+
+                h3 Order history
+                - for (let i = 0; i < 1; i++)
+                    .product-table
+                        h3 Order ID: 12123123
+                        label. 
+                            #[b To user: ] 
+                        span SomeUser
+                        br
+                        label. 
+                            #[b To: ] 
+                        span Country, City, Address, 1231212 
+                        br
+                        label.
+                            #[b Ordered on date: ]
+                        span 19/09/2019
+                        br
+                        label.
+                            #[b Delivered on date: ]
+                        span 25/09/2019
+                        hr
+                        
+                        - for (let i = 0; i < 4; i++)
+                            .product-row
+                                img(src="../img/donut.svg", alt="Donut Image")
+                                span Some Donut
+                                span x2
+                                span $9.98
+                            hr
+
+                        .total
+                            label.
+                                #[b Total: ]
+                            span $39.92
+                
+                +pagination

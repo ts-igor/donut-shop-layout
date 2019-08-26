@@ -1,0 +1,30 @@
+include parts/mixins.pug
+
++page("Payment")
+    .centered-container
+        section.orders
+            h2 Thank you. We have accepted your order
+
+            .product-table
+                h3 Order ID: 112355
+                label. 
+                    #[b To: ] 
+                span Country, City, Address, 1231212 
+                br
+                label.
+                    #[b Ordered on date: ]
+                span 19/09/2019 
+                hr
+                
+                - for (let i = 0; i < 4; i++)
+                    .product-row
+                        img(src="../img/donut.svg", alt="Donut Image")
+                        span Some Donut
+                        span x2
+                        span $9.98
+                    hr
+                
+                .total
+                    label.
+                        #[b Total: ]
+                    span $39.92

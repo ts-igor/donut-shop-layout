@@ -1,0 +1,29 @@
+footer {
+    background-color: $primary-color;
+    font-size: .85rem;
+
+    p {
+        margin: 0.5rem;
+    }
+
+    .centered-container {
+        text-align: center;
+        padding: 0.75rem;
+    }
+    
+    .horizontal-list {
+        margin-top: 1.5rem;
+        
+        li {
+            margin-right: 0.25rem;
+            margin-left: 0.25rem;
+            padding: 0.25rem;
+            border-left: 1px solid $on-primary-color;
+            border-right: 1px solid $on-primary-color;
+
+            &:hover {
+                color: $secondary-color;
+            }
+        }
+    }
+}

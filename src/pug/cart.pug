@@ -1,0 +1,21 @@
+include parts/mixins.pug
+
++page("Cart")
+    .centered-container
+        section.cart
+            h2 Cart
+
+            ul.horizontal-list
+                - for (let i = 0; i < 3; i++)
+                    li
+                        img(src="../img/donut.svg", alt="Donut Image")
+                        span Some Donut
+                        input(type="number" value="1" min="1")
+                        input(type="submit" value="Remove")
+                    hr
+
+            form(action="payment.html" method="GET")
+                input.continue-button(
+                    type="submit" 
+                    value="Continue to payment"
+                )

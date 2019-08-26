@@ -1,0 +1,38 @@
+include parts/mixins.pug
+
++page("Products")
+    .centered-container
+        section.products-filter
+            form(action="", method="GET")
+                .top-left
+                    input(
+                        type="search"
+                        name="q"
+                        placeholder="Search by name"
+                    )
+
+                .top-right
+                    input(type="submit", value="Search")
+
+            form(action="", method="GET")
+                .bottom-left
+                    select(name="category")
+                        option(value="1") Category
+                    select(name="order")
+                        option(value="name-asc") A-Z
+                        option(value="name-desc") Z-A
+                        option(value="price-asc") Price: from lowest
+                        option(value="price-desc") Price: from highest
+                
+                .bottom-right
+                    input(type="submit", value="Filter")
+
+        section.products-grid
+            - for (let i = 0; i < 12; i++)
+                .grid-cell
+                    a(href="/product.html")
+                        img(src="../img/donut.svg", alt="Donut Image")
+                        span Product Name
+                        span $4.99
+
+        +pagination

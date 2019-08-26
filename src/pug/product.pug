@@ -1,0 +1,26 @@
+include parts/mixins.pug
+
++page("Product")
+    .centered-container    
+        section.product-info
+            .img
+                img(src="./img/donut.svg" alt="Donut Image")
+
+            .description
+                h2 Some Donut
+                p.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Repudiandae corporis repellat impedit praesentium molestiae,
+                    asperiores dignissimos assumenda saepe totam enim dolorem ratione
+                    voluptatem possimus numquam perferendis, eligendi eveniet excepturi sint.
+                p $4.99
+
+            .actions
+                form(action="" method="POST")
+                    input(
+                        type="number" 
+                        name="quantity"
+                        value="1"
+                        min="1" max="4"
+                    )
+                    input(type="submit" value="Add to Cart")

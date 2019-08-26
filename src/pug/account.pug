@@ -1,0 +1,103 @@
+include parts/mixins.pug
+
++page("Account")
+    .centered-container
+        section.account
+            section.account-info
+                h2 Account information
+
+                label. 
+                    #[b Username: ]
+                span AdminName
+                br
+
+                label.
+                    #[b E-mail: ]
+                span admin@admin.com
+                br
+
+                label.
+                    #[b Country: ]
+                span Netherlands
+                br
+
+                label.
+                    #[b City: ]
+                span Amsterdam
+                br
+
+                label.
+                    #[b Street: ]
+                span Main str.
+                br
+
+                label.
+                    #[b Postal Code: ]
+                span 12345678
+                br
+
+                form(action="" method="GET")
+                    input(type="submit", value="Change")
+
+            section.orders
+                h2 Ordered products
+                - for (let i = 0; i < 3; i++)
+                    .product-table
+                        h3 Order ID: 112355
+                        label. 
+                            #[b To: ] 
+                        span Country, City, Address, 1231212 
+                        br
+                        label.
+                            #[b On date: ]
+                        span 19/09/2019 
+                        hr
+                        
+                        - for (let i = 0; i < 4; i++)
+                            .product-row
+                                img(src="../img/donut.svg", alt="Donut Image")
+                                span Some Donut
+                                span x2
+                                span $9.98
+                            hr
+                        
+                        .total
+                            label.
+                                #[b Total: ]
+                            span $39.92
+                
+                +pagination
+
+                h2 Delivered products
+                - for (let i = 0; i < 3; i++)
+                    .product-table
+                        h3 Order ID: 12123123
+                        label. 
+                            #[b To: ] 
+                        span Country, City, Address, 1231212 
+                        br
+                        label.
+                            #[b On date: ]
+                        span 19/09/2019
+                        br
+                        label.
+                            #[b Delivered on date: ]
+                        span 25/09/2019
+                        hr
+                        
+                        - for (let i = 0; i < 4; i++)
+                            .product-row
+                                img(src="../img/donut.svg", alt="Donut Image")
+                                span Some Donut
+                                span x2
+                                span $9.98
+                            hr
+
+                        .total
+                            label.
+                                #[b Total: ]
+                            span $39.92
+                
+                +pagination
+                        
+

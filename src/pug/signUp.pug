@@ -1,0 +1,53 @@
+include parts/mixins.pug
+
++page("Sign up")
+    .centered-container
+        section.sign-up
+            
+            h2 Sign up
+            
+            form(action="" method="POST")
+                input(
+                    name="username"
+                    type="text" 
+                    autofocus 
+                    required 
+                    minlength="3" maxlength="20" 
+                    placeholder="Username"
+                )
+                
+                input(
+                    name="email" 
+                    type="email" 
+                    required 
+                    minlength="5" maxlength="40" 
+                    placeholder="E-mail"
+                )
+                
+                input(
+                    name="password" 
+                    type="password" 
+                    required 
+                    minlength="6" 
+                    placeholder="Password"
+                )
+                
+                input(
+                    name="address.country" 
+                    type="text" 
+                    placeholder="Country"
+                )
+                
+                input(
+                    name="address.street" 
+                    type="text" 
+                    placeholder="Street"
+                )
+                
+                input(
+                    name="address.postalCode" 
+                    type="number"
+                     placeholder="Postal Code"
+                )
+
+                input(type="submit" value="Sign up")

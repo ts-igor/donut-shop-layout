@@ -4,7 +4,7 @@ This is an **HTML+CSS** layout pages for a simple donut shop. Interface is adapt
 
 ## Prebuilt files
 
-If you just want to look at the pages, last prebuilt files are under *dist* directory.
+If you just want to look at the pages, latest prebuilt files are under *dist* directory.
 
 ## Installation for development
 
